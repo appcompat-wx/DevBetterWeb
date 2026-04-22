@@ -1,5 +1,0 @@
-<Project>
-<PropertyGroup>
-  <NuGetAuditMode>direct</NuGetAuditMode>
-</PropertyGroup>
-</Project>
