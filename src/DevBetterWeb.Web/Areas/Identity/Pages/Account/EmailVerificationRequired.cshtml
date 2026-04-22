@@ -1,0 +1,30 @@
+﻿@page
+@model DevBetterWeb.Web.Areas.Identity.Pages.Account.EmailVerificationRequiredModel
+
+@{
+    <div class="alert alert-success">
+        <h3>Email Verification Required</h3>
+        <p>An email has been sent to the address associated with your account.  Please follow the instructions in the email to complete the email verification process.</p>
+        @if (!Model.VerificationEmailSent)
+        {
+            <form method="post">
+                <h4>Request another verification email.</h4>
+                <hr />
+
+                <div condition="!User.Identity.IsAuthenticated" class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Send Verification Email</button>
+                </div>
+            </form>
+        }
+        else
+        {
+            <h4>Verification email sent!</h4>
+        }
+    </div>
+}

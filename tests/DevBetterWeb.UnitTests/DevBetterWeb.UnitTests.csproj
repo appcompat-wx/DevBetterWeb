@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NSubstitute" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Flurl.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DevBetterWeb.Core\DevBetterWeb.Core.csproj" />
+    <ProjectReference Include="..\..\src\DevBetterWeb.Infrastructure\DevBetterWeb.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\DevBetterWeb.Web\DevBetterWeb.Web.csproj" />
+  </ItemGroup>
+</Project>
